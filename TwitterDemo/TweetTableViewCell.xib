@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="KGk-i7-Jjw" customClass="TweetTableViewCell" customModule="TwitterDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="119.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kbw-xW-SUE">
+                        <rect key="frame" x="8" y="8" width="53" height="53"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="53" id="4m2-Pe-RxX"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="LV5-4W-fyj"/>
+                            <constraint firstAttribute="width" constant="53" id="ZVd-VY-ExO"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="xn4-hf-87N"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="4h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEt-xc-XuB">
+                        <rect key="frame" x="296" y="8" width="16" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="I just might be the trillest lil hitta you eva gon see" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcH-kr-lom">
+                        <rect key="frame" x="69" y="34" width="243" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Young Thug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPg-Uc-9PQ">
+                        <rect key="frame" x="69" y="8" width="93" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="@youngthug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lb-tH-Bqy">
+                        <rect key="frame" x="170" y="8" width="87" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="lcH-kr-lom" secondAttribute="bottom" constant="8" id="4V2-Qb-rlc"/>
+                    <constraint firstItem="NPg-Uc-9PQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="9PW-lU-L8y"/>
+                    <constraint firstAttribute="trailing" secondItem="lcH-kr-lom" secondAttribute="trailing" constant="8" id="BCN-7O-uHi"/>
+                    <constraint firstItem="vEt-xc-XuB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1lb-tH-Bqy" secondAttribute="trailing" constant="8" id="VPJ-rx-wmN"/>
+                    <constraint firstItem="1lb-tH-Bqy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="cOz-z3-xjA"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Kbw-xW-SUE" secondAttribute="bottom" constant="8" id="eNd-ug-6mh"/>
+                    <constraint firstItem="vEt-xc-XuB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="fX9-oa-fsx"/>
+                    <constraint firstItem="lcH-kr-lom" firstAttribute="top" secondItem="1lb-tH-Bqy" secondAttribute="bottom" constant="8" id="g0t-Y1-46i"/>
+                    <constraint firstItem="1lb-tH-Bqy" firstAttribute="leading" secondItem="NPg-Uc-9PQ" secondAttribute="trailing" constant="8" id="jFZ-H7-98h"/>
+                    <constraint firstItem="Kbw-xW-SUE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="jmg-SG-ziS"/>
+                    <constraint firstItem="NPg-Uc-9PQ" firstAttribute="leading" secondItem="Kbw-xW-SUE" secondAttribute="trailing" constant="8" id="nJ6-TV-boU"/>
+                    <constraint firstAttribute="trailing" secondItem="vEt-xc-XuB" secondAttribute="trailing" constant="8" id="sRZ-uW-Uu7"/>
+                    <constraint firstItem="lcH-kr-lom" firstAttribute="leading" secondItem="Kbw-xW-SUE" secondAttribute="trailing" constant="8" id="wPu-xd-iUu"/>
+                    <constraint firstItem="Kbw-xW-SUE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="wkn-hN-TeD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="profileImageView" destination="Kbw-xW-SUE" id="ZDl-Jf-N6l"/>
+                <outlet property="timestampLabel" destination="vEt-xc-XuB" id="1ex-Fj-3mx"/>
+                <outlet property="tweetProfileLabel" destination="1lb-tH-Bqy" id="M7g-j9-lep"/>
+                <outlet property="tweetTextLabel" destination="lcH-kr-lom" id="RUz-zs-QiI"/>
+                <outlet property="tweetUserNameLabel" destination="NPg-Uc-9PQ" id="y8e-o4-apc"/>
+            </connections>
+            <point key="canvasLocation" x="279" y="298"/>
+        </tableViewCell>
+    </objects>
+</document>

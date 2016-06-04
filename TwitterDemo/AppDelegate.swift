@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import BDBOAuth1Manager
+import HexColors
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
+    self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+    let menuVc = MenuViewController()
+    self.window?.rootViewController = menuVc
+    self.window?.makeKeyAndVisible()
+    
     return true
   }
 
@@ -41,6 +48,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
 
-
+  func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+    TwitterClient.sharedInstance.handleOpenUrl(url)
+    return true
+  }
 }
 
