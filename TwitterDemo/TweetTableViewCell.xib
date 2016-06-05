@@ -26,27 +26,27 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="4h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEt-xc-XuB">
-                        <rect key="frame" x="296" y="8" width="16" height="16"/>
+                        <rect key="frame" x="296" y="9" width="16" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Young Thug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPg-Uc-9PQ">
+                        <rect key="frame" x="69" y="8" width="82.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" misplaced="YES" text="@youngthug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lb-tH-Bqy">
+                        <rect key="frame" x="155" y="9" width="77" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="I just might be the trillest lil hitta you eva gon see" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcH-kr-lom">
-                        <rect key="frame" x="69" y="34" width="243" height="36"/>
+                        <rect key="frame" x="69" y="33" width="243" height="36"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Young Thug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPg-Uc-9PQ">
-                        <rect key="frame" x="69" y="8" width="93" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="@youngthug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lb-tH-Bqy">
-                        <rect key="frame" x="170" y="8" width="87" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -55,9 +55,9 @@
                     <constraint firstItem="NPg-Uc-9PQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="9PW-lU-L8y"/>
                     <constraint firstAttribute="trailing" secondItem="lcH-kr-lom" secondAttribute="trailing" constant="8" id="BCN-7O-uHi"/>
                     <constraint firstItem="vEt-xc-XuB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1lb-tH-Bqy" secondAttribute="trailing" constant="8" id="VPJ-rx-wmN"/>
-                    <constraint firstItem="1lb-tH-Bqy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="cOz-z3-xjA"/>
+                    <constraint firstItem="1lb-tH-Bqy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="cOz-z3-xjA"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Kbw-xW-SUE" secondAttribute="bottom" constant="8" id="eNd-ug-6mh"/>
-                    <constraint firstItem="vEt-xc-XuB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="fX9-oa-fsx"/>
+                    <constraint firstItem="vEt-xc-XuB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="fX9-oa-fsx"/>
                     <constraint firstItem="lcH-kr-lom" firstAttribute="top" secondItem="1lb-tH-Bqy" secondAttribute="bottom" constant="8" id="g0t-Y1-46i"/>
                     <constraint firstItem="1lb-tH-Bqy" firstAttribute="leading" secondItem="NPg-Uc-9PQ" secondAttribute="trailing" constant="8" id="jFZ-H7-98h"/>
                     <constraint firstItem="Kbw-xW-SUE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="jmg-SG-ziS"/>

@@ -43,7 +43,9 @@ class MenuViewController: UIViewController, MenuSelectDelegate {
       activeViewController = navVC
     case "Mentions":
       let mentionsVc = MentionsViewController()
-      activeViewController = mentionsVc
+      let navVC = UINavigationController(rootViewController: mentionsVc)
+            navVC.navigationBar.barTintColor = UIColor.hx_colorWithHexString("#55acee")
+      activeViewController = navVC
     default: break
     }
     UIView.animateWithDuration(0.3, animations: {

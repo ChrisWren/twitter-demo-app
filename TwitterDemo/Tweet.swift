@@ -12,8 +12,11 @@ class Tweet: NSObject {
   
   var text: String?
   var timestamp: NSDate?
+  var retweeted: Bool?
   var retweetCount: Int = 0
+  var favorited: Bool?
   var favoritesCount: Int = 0
+  var tweet_id: String?
   var profilePicUrl: NSURL?
   var screenname :String?
   var name :String?
@@ -21,10 +24,21 @@ class Tweet: NSObject {
   
   init(dictionary: NSDictionary) {
     print(dictionary)
+    tweet_id = dictionary["id"] as? String
     text = dictionary["text"] as? String
     retweetCount = dictionary["retweet_count"] as? Int ?? 0
+    retweeted = dictionary["retweeted"] as? Bool ?? false
     favoritesCount = dictionary["favourites_count"] as? Int ?? 0
+    favorited = dictionary["favorited"] as? Bool ?? false
     user = User(dictionary: dictionary["user"] as! NSDictionary)
+    
+    
+    let timestampString = dictionary["created_at"] as? String
+    if let timestampString = timestampString {
+      let formatter = NSDateFormatter()
+      formatter.dateFormat = "EEE MMM d HH:mm:ss Z y"
+      timestamp = formatter.dateFromString(timestampString)
+    }
   }
 
   func timeAgoSince(date: NSDate) -> String {

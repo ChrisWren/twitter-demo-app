@@ -12,6 +12,7 @@ class TweetDetailViewController: UIViewController {
   
     var tweet :Tweet?
 
+  @IBOutlet weak var timestampLabel: UILabel!
   var retweeted = false
   var liked = false
   @IBOutlet weak var replyImageView: UIImageView!
@@ -33,7 +34,6 @@ class TweetDetailViewController: UIViewController {
       navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
       
       tweetTextLabel.text = tweet?.text
-//      timeagoLabel.text = tweet?.timeAgoSince(tweet.timestamp!)
       usernameLabel.text = tweet?.user?.name
       screennameLabel.text = tweet?.user?.screenname
       profileImageView.setImageWithURL((tweet?.user?.profileUrl)!)
@@ -41,25 +41,60 @@ class TweetDetailViewController: UIViewController {
         favoriteCountLabel.text = String(favoritesCount)
       }
       
+      if let timestamp = tweet?.timestamp {
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.LongStyle
+        formatter.timeStyle = .MediumStyle
+        
+        let dateString = formatter.stringFromDate(timestamp)
+        timestampLabel.text = dateString
+      }
+
+      
       if let retweetCount = tweet?.retweetCount{
         retweetCountLabel.text = String(retweetCount)
       }
       
-      
-      
+      liked = tweet?.favorited ?? false
+      retweeted = tweet?.retweeted ?? false
 
         // Do any additional setup after loading the view.
     }
   @IBAction func onTapHeartIcon(sender: UITapGestureRecognizer) {
     liked = !liked
+    updateHeart()
+  }
+  
+  func updateHeart() {
     if liked {
       heartImageView.image = UIImage.init(named: "heart_selected")
     } else {
       heartImageView.image = UIImage.init(named: "heart")
     }
   }
+  
   @IBAction func onRetweetTapped(sender: AnyObject) {
     retweeted = !retweeted
+    updateRetweet()
+    
+    if let tweetId = tweet?.tweet_id {
+      if retweeted {
+        TwitterClient.sharedInstance.retweet(tweetId, success: { (response:AnyObject?) in
+          print("retweeted")
+          }, failure: { (error: NSError) in
+            print("Error: \(error)")
+        })
+      } else {
+        TwitterClient.sharedInstance.unretweet(tweetId, success: { (response:AnyObject?) in
+          print("retweeted")
+          }, failure: { (error: NSError) in
+            print("Error: \(error)")
+        })
+      }
+    }
+  }
+  
+  func updateRetweet() {
     if retweeted {
       retweetImageView.image = UIImage.init(named: "retweet_selected")
     } else {

@@ -27,11 +27,38 @@ class TwitterClient: BDBOAuth1SessionManager {
     })
   }
   
+  func mentions(success: ([Tweet]) ->  (), failure: ((NSError) -> ())?) {
+    GET("1.1/statuses/mentions_timeline.json", parameters: nil, success: { (task: NSURLSessionDataTask, response: AnyObject?) in
+      let tweets = response as! [NSDictionary]
+      success(Tweet.tweetsWithArray(tweets))
+      }, failure: { (task: NSURLSessionDataTask?, error: NSError) -> Void in
+        if let failure = failure {
+          failure(error)
+        }
+    })
+  }
+  
   func tweet(status: String, success: (AnyObject?) ->  (), failure: ((NSError) -> ())?) {
     POST("1.1/statuses/update.json", parameters: ["status": status], success: { (task:NSURLSessionDataTask, response:AnyObject?) in
       success(response)
     }) { (task: NSURLSessionDataTask?, error: NSError) in
         failure!(error)
+    }
+  }
+  
+  func retweet(id: String, success: (AnyObject?) ->  (), failure: ((NSError) -> ())?) {
+    POST("1.1/statuses/retweet/\(id).json", parameters: [], success: { (task:NSURLSessionDataTask, response:AnyObject?) in
+      success(response)
+    }) { (task: NSURLSessionDataTask?, error: NSError) in
+      failure!(error)
+    }
+  }
+  
+  func unretweet(id: String, success: (AnyObject?) ->  (), failure: ((NSError) -> ())?) {
+    POST("1.1/statuses/unretweet/\(id).json", parameters: [], success: { (task:NSURLSessionDataTask, response:AnyObject?) in
+      success(response)
+    }) { (task: NSURLSessionDataTask?, error: NSError) in
+      failure!(error)
     }
   }
   

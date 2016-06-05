@@ -44,8 +44,8 @@
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WDz-Gb-1cP">
-                            <rect key="frame" x="0.0" y="61" width="320" height="460"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WDz-Gb-1cP">
+                            <rect key="frame" x="0.0" y="61" width="314" height="435"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -56,9 +56,13 @@
                         <constraint firstItem="vd9-Wa-w7b" firstAttribute="top" secondItem="zkr-l7-FiG" secondAttribute="top" id="5HU-g4-Guh"/>
                         <constraint firstAttribute="trailing" secondItem="2AC-Fx-OP5" secondAttribute="trailing" id="Bk7-Gw-bOa"/>
                         <constraint firstItem="vd9-Wa-w7b" firstAttribute="leading" secondItem="zkr-l7-FiG" secondAttribute="leading" id="NfW-id-2u2"/>
+                        <constraint firstAttribute="trailing" secondItem="WDz-Gb-1cP" secondAttribute="trailing" constant="-10" id="U4U-BE-ghO"/>
+                        <constraint firstItem="WDz-Gb-1cP" firstAttribute="leading" secondItem="zkr-l7-FiG" secondAttribute="leading" id="a0b-Te-L2t"/>
                         <constraint firstItem="2AC-Fx-OP5" firstAttribute="top" secondItem="zkr-l7-FiG" secondAttribute="top" id="aVN-WD-ag0"/>
+                        <constraint firstAttribute="bottom" secondItem="WDz-Gb-1cP" secondAttribute="bottom" id="c6H-mQ-Wno"/>
                         <constraint firstAttribute="trailing" secondItem="vvm-E3-HNy" secondAttribute="trailing" id="dXe-gF-pZO"/>
                         <constraint firstItem="vvm-E3-HNy" firstAttribute="leading" secondItem="vd9-Wa-w7b" secondAttribute="trailing" constant="8" id="e5W-YO-OkZ"/>
+                        <constraint firstItem="WDz-Gb-1cP" firstAttribute="top" secondItem="vd9-Wa-w7b" secondAttribute="bottom" constant="8" id="p8i-iP-iZS"/>
                         <constraint firstItem="2AC-Fx-OP5" firstAttribute="leading" secondItem="vd9-Wa-w7b" secondAttribute="trailing" constant="8" id="pUe-Lu-3Xe"/>
                         <constraint firstItem="vvm-E3-HNy" firstAttribute="top" secondItem="2AC-Fx-OP5" secondAttribute="bottom" constant="8" id="wB4-Yp-Feq"/>
                     </constraints>

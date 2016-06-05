@@ -37,8 +37,10 @@ class UserProfileViewController: UIViewController {
         followingLabel.text = String(followingCount)
       }
       
-      screennameLabel.text = "@" + (user?.screenname)!
+      screennameLabel.text = user?.screenname
       userProfileImageView.setImageWithURL((user?.profileUrl)!)
+      
+      view.bringSubviewToFront(userProfileImageView)
       
       
       
